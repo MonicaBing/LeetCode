@@ -9,16 +9,15 @@
     
 def diagonalSum(mat):
     
-    n = len(mat)
-    result = 0
+    result, n = 0,len(mat)
     
     for i in range (0, n):
-        result += mat[i][i]
-        result += mat[i][n-1-i]
+        result += mat[i][i] + mat[i][n-1-i]
         
         if i == n-1-i:
             result -= mat[i][i]
     return result
+
 
 
 final = diagonalSum([[1,2,3],
